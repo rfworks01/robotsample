@@ -33,7 +33,23 @@ jobs:
       run: |
         python -m robot -d reports -x junit-report.xml src/sel
     
+    - name: Report- Download artifacts 
+      run: |
+        cd reports
+        echo "Downloading artifcats of report"
     
+    - name: Report- Publish Report
+      uses: actions/upload-artifacts@v2
+      with: 
+        name: asset-reports
+        path: reports
+
+
+
+
+
+
+
     # - name: Upload tests
     #   uses: joonvena/robotframework-docker-action@v1.0
     # - name: Upload test results
