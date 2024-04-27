@@ -32,7 +32,7 @@ jobs:
     - name: Execute Robo Tests
       run: |
         # python -m robot --agrumentfile arg_gitaction.robot
-        robot --agrumentfile arg_gitaction.robot
+        robot --agrumentfile ./arg_gitaction.robot
     
     
     # - name: Upload tests
