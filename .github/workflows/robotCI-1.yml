@@ -31,7 +31,7 @@ jobs:
    
     - name: Execute Robo Tests
       run: |
-        python -m robot -d reports -x junit-report.xml --name "src/sel/test_*.robot"
+        python -m robot -d reports -x junit-report.xml --suite src/sel/test_*.robot
     
     
     # - name: Upload tests
