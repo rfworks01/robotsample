@@ -31,4 +31,15 @@ jobs:
    
     - name: Execute Robo Tests
       run: |
-        python -m robot -d reports -x junit-report.xml "src/sel/sel_suite1.robot"
+        python -m robot --agrumentFile arg_gitaction.robot
+    
+    
+    
+    - name: Upload tests
+      uses: joonvena/robotframework-docker-action@v1.0
+    - name: Upload test results
+      uses: actions/upload-artifact@v1
+      if: always()
+      with:
+        name: reports
+        path: reports
