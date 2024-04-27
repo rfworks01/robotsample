@@ -31,7 +31,7 @@ jobs:
    
     - name: Execute Robo Tests
       run: |
-        python -m robot --agrumentfile ./arg_gitaction.robot
+        python -m robot -d reports -x junit-report.xml "/src/sel/test_*.robot"
     
     
     # - name: Upload tests
