@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.6 on win32)" generated="2024-04-20T19:16:59.523611" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Browser1" source="E:\Robot\ROBOT_FRAMEWORK\robot-2024\robotsample01\src\wd\test_browser1.robot">
+<test id="s1-t1" name=" Test01_checkbrowser" line="7">
+<kw name="Init_Browser" owner="browserwork">
+<msg time="2024-04-20T19:16:59.742355" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<arg>url1=https://www.google.com/</arg>
+<arg>browser=chrome</arg>
+<status status="PASS" start="2024-04-20T19:16:59.742355" elapsed="12.632662"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-20T19:17:15.379569" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-20T19:17:12.375017" elapsed="3.004552"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-20T19:17:15.381170" level="INFO">Typing text 'selenium
+' into text field 'q'.</msg>
+<arg>q</arg>
+<arg>selenium\n</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-20T19:17:15.381170" elapsed="0.348950"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-20T19:17:19.740686" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-20T19:17:15.730120" elapsed="4.010566"/>
+</kw>
+<kw name="scroll vertical by pixel" owner="browserwork">
+<msg time="2024-04-20T19:17:19.740686" level="INFO">Executing JavaScript:
+window.scrollTo(0,300);
+Without any arguments.</msg>
+<msg time="2024-04-20T19:17:19.760208" level="INFO">Executing JavaScript:
+window.scrollTo(0,300);
+Without any arguments.</msg>
+<msg time="2024-04-20T19:17:19.766290" level="INFO">Executing JavaScript:
+window.scrollTo(0,300);
+Without any arguments.</msg>
+<msg time="2024-04-20T19:17:19.770290" level="INFO">sample keyword</msg>
+<arg>300</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-04-20T19:17:19.740686" elapsed="0.030604"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${EXECDIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-20T19:17:19.771290" elapsed="0.000998"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-20T19:17:23.784002" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-20T19:17:19.772288" elapsed="4.011714"/>
+</kw>
+<status status="PASS" start="2024-04-20T19:16:59.742355" elapsed="24.041647"/>
+</test>
+<status status="PASS" start="2024-04-20T19:16:59.523611" elapsed="24.260391"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Browser1">Test Browser1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

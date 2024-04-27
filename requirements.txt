@@ -1,0 +1,6 @@
+robotframework
+robotframework-seleniumlibrary
+robotframework-metrics
+selenium 
+setuptools
+virtualenv
