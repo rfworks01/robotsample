@@ -2,8 +2,6 @@
 Library       SeleniumLibrary
 Suite Setup   Start Chrome With Options
 
-# Suite Setup   Open Browser      https://www.google.com/    browser=chrome  options=Add Chrome Options
-
 
 *** Test Cases ***
 Starting a browser with a page
