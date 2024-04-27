@@ -39,7 +39,7 @@ jobs:
         echo "Downloading artifcats of report"
     
     - name: Report- Publish Report
-      uses: actions/upload-artifacts@v2
+      uses: actions/upload-artifact@v2
       with: 
         name: asset-reports
         path: reports
