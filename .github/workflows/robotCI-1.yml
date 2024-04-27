@@ -31,7 +31,7 @@ jobs:
    
     - name: Execute Robo Tests
       run: |
-        python -m robot --agrumentFile arg_gitaction.robot
+        python -m robot --agrumentfile arg_gitaction.robot
     
     
     
