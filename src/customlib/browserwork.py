@@ -10,21 +10,19 @@ SelInstance = BuiltIn().get_library_instance("SeleniumLibrary")
 @keyword("open chrome with '${url}'")
 def open_chrome_with_url(url):
 
-    # user_dir = str(Path.home() ) +'/AppData/Local/Google/Chrome/User Data'
-    # print("using use-dir: " +user_dir)
+  
     chrome_options = Options()
-    #
-    # # prefs = {"download.default_directory": "/some/path"}
-    # # adding Chrome Profile Path
-    # # chrome_options.add_argument('user-data-dir='+user_dir)
-    # # chrome_options.add_argument('--profile-directory=Profile 2')
+  
     chrome_options.add_argument('--disable-infobar')
     chrome_options.add_argument('--window-size=900,600')
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_argument('--disable-extensions')
-    # options.headless = headless_mode
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--headless=True')
+    chrome_options.add_argument('--log-level=3')
 
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)
     time.sleep(2)
 
@@ -32,19 +30,18 @@ def open_chrome_with_url(url):
 @keyword("Init_Browser")
 def init_browser(browser, url1, headless_mode=False):
     if browser == "chrome":
-       options = Options()
-    #    prefs = {"download.default_directory": "/some/path"}
-       # adding Chrome Profile Path
-       # options.add_argument = {'user-data-dir':'/Users/Application/Chrome/Default'}
-       options.add_argument('--disable-infobar')
-       options.add_argument('--window-size=900,600')
-       options.add_argument('--disable-blink-features=AutomationControlled')
-       options.add_argument('--disable-extensions')
-       # options.headless = headless_mode
-       # driver = BuiltIn().get_library_instance('SeleniumLibrary')
-       driver = SelInstance;
-       driver.open_browser(url=url1, browser=browser, options=options) #, executable_path=path)
-       time.sleep(5)
+       chrome_options = Options()
+       chrome_options.add_argument('--disable-infobar')
+       chrome_options.add_argument('--window-size=900,600')
+       chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+       chrome_options.add_argument('--disable-extensions')
+       chrome_options.add_argument('--no-sandbox')
+       chrome_options.add_argument('--disable-dev-shm-usage')
+       chrome_options.add_argument('--headless='+str(headless_mode))
+       chrome_options.add_argument('--log-level=3')
+    driver = SelInstance;
+    driver.open_browser(url=url1, browser=browser, options=chrome_options) #, executable_path=path)
+    time.sleep(5)
 
 
 @keyword("scroll vertical by pixel")
