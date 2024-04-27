@@ -33,16 +33,24 @@ jobs:
       run: |
         python -m robot -d reports -x junit-report.xml src/sel
     
-    - name: Report- Download artifacts 
-      run: |
-        cd reports
-        echo "Downloading artifcats of report"
+
+    - name: Test Report Generation
+      uses: actions/upload-artifact@v4
+      if: success() || failure()
+      with:
+        name: Report                # Name of the folder
+        path: reports/report.html           # Path to test results
     
-    - name: Report- Publish Report
-      uses: actions/upload-artifact@v2
-      with: 
-        name: asset-reports
-        path: reports
+    # - name: Report- Download artifacts 
+    #   run: |
+    #     cd reports
+    #     echo "Downloading artifcats of report"
+    
+    # - name: Report- Publish Report
+    #   uses: actions/upload-artifact@v2
+    #   with: 
+    #     name: asset-reports
+    #     path: reports
 
 
 
