@@ -1,6 +1,6 @@
 *** Settings ***
 Library       SeleniumLibrary
-Suite Setup   Add Chrome Options
+Suite Setup   Start Chrome With Options
 
 # Suite Setup   Open Browser      https://www.google.com/    browser=chrome  options=Add Chrome Options
 
@@ -13,7 +13,7 @@ Starting a browser with a page
     Log To Console      ${result_stat}
 
 *** Keywords ***
-Add Chrome Options
+Start Chrome With Options
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()    sys
     Call Method  ${options}  add_argument  --disable-notifications
     Call Method  ${options}  add_argument  --disable-infobars
