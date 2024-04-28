@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.14 on linux)" generated="2024-04-28T06:14:38.671976" rpa="false" schemaversion="5">
+<suite id="s1" name="Sel" source="/home/runner/work/robotsample/robotsample/src/sel">
+<suite id="s1-s1" name="Test Sample1" source="/home/runner/work/robotsample/robotsample/src/sel/test_sample1.robot">
+<kw name="Start Chrome With Options" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-28T06:14:38.881394" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f4df3aedea0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-28T06:14:38.881034" elapsed="0.000402"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-28T06:14:38.881583" elapsed="0.000167"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-infobars</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-28T06:14:38.881867" elapsed="0.000145"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-28T06:14:38.882123" elapsed="0.000149"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-28T06:14:38.882380" elapsed="0.000136"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-28T06:14:38.882621" elapsed="0.000137"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-28T06:14:38.882866" elapsed="0.000133"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--log-level\=3</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-28T06:14:38.883103" elapsed="0.000156"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-28T06:14:38.883657" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<arg>https://www.google.com/</arg>
+<arg>browser=chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-28T06:14:38.883413" elapsed="11.379835"/>
+</kw>
+<status status="PASS" start="2024-04-28T06:14:38.880354" elapsed="11.383082"/>
+</kw>
+<test id="s1-s1-t1" name="Starting a browser with a page" line="7">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T06:14:50.264517" level="INFO">Typing text 'playwright-robotframework
+' into text field 'xpath=//*[@name='q']'.</msg>
+<arg>xpath=//*[@name='q']</arg>
+<arg>playwright-robotframework\n</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T06:14:50.264100" elapsed="0.876638"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-28T06:14:54.141644" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-28T06:14:51.141151" elapsed="3.000664"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T06:14:54.161723" level="INFO">${result_stat} = About 86,000 results (0.20 seconds) </msg>
+<var>${result_stat}</var>
+<arg>id=result-stats</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T06:14:54.142111" elapsed="0.019654"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${result_stat}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-28T06:14:54.161952" elapsed="0.000254"/>
+</kw>
+<status status="PASS" start="2024-04-28T06:14:50.263572" elapsed="3.898810"/>
+</test>
+<status status="PASS" start="2024-04-28T06:14:38.692243" elapsed="15.470626"/>
+</suite>
+<suite id="s1-s2" name="Test Scroll01" source="/home/runner/work/robotsample/robotsample/src/sel/test_scroll01.robot">
+<test id="s1-s2-t1" name=" Test01_checkbrowser" line="7">
+<kw name="Init_Browser" owner="browserwork">
+<msg time="2024-04-28T06:14:54.167711" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<arg>url1=https://www.google.com/</arg>
+<arg>browser=chrome</arg>
+<arg>headless_mode=True</arg>
+<status status="PASS" start="2024-04-28T06:14:54.167494" elapsed="5.802039"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-28T06:15:00.970310" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-28T06:14:59.969891" elapsed="1.000590"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-28T06:15:00.971123" level="INFO">Typing text 'selenium
+' into text field 'q'.</msg>
+<arg>q</arg>
+<arg>selenium\n</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-28T06:15:00.970790" elapsed="0.794665"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-28T06:15:02.766138" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-28T06:15:01.765753" elapsed="1.000539"/>
+</kw>
+<kw name="scroll vertical by pixel" owner="browserwork">
+<msg time="2024-04-28T06:15:02.767076" level="INFO">Executing JavaScript:
+window.scrollTo(0,300);
+Without any arguments.</msg>
+<msg time="2024-04-28T06:15:02.771975" level="INFO">Executing JavaScript:
+window.scrollTo(0,300);
+Without any arguments.</msg>
+<msg time="2024-04-28T06:15:02.775215" level="INFO">Executing JavaScript:
+window.scrollTo(0,300);
+Without any arguments.</msg>
+<msg time="2024-04-28T06:15:02.782449" level="INFO">sample keyword</msg>
+<arg>300</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-04-28T06:15:02.766553" elapsed="0.016027"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\n${EXECDIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-28T06:15:02.782911" elapsed="0.000443"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-28T06:15:03.784142" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-28T06:15:02.783554" elapsed="1.000738"/>
+</kw>
+<status status="PASS" start="2024-04-28T06:14:54.167166" elapsed="9.617368"/>
+</test>
+<status status="PASS" start="2024-04-28T06:14:54.163430" elapsed="9.621675"/>
+</suite>
+<status status="PASS" start="2024-04-28T06:14:38.672772" elapsed="25.112998"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Sel">Sel</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Sample1">Sel.Test Sample1</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Test Scroll01">Sel.Test Scroll01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
