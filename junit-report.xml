@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Sel" tests="2" errors="0" failures="0" skipped="0" time="14.806" timestamp="2024-04-28T06:36:14.860220">
-<testsuite name="Test Sample1" tests="1" errors="0" failures="0" skipped="0" time="4.985" timestamp="2024-04-28T06:36:14.878525">
-<testcase classname="Sel.Test Sample1" name="Starting a browser with a page" time="3.864">
+<testsuite name="Sel" tests="2" errors="0" failures="0" skipped="0" time="19.130" timestamp="2024-04-28T06:41:22.504517">
+<testsuite name="Test Sample1" tests="1" errors="0" failures="0" skipped="0" time="9.150" timestamp="2024-04-28T06:41:22.523321">
+<testcase classname="Sel.Test Sample1" name="Starting a browser with a page" time="3.333">
 </testcase>
 </testsuite>
-<testsuite name="Test Scroll01" tests="1" errors="0" failures="0" skipped="0" time="9.802" timestamp="2024-04-28T06:36:19.863698">
-<testcase classname="Sel.Test Scroll01" name=" Test01_checkbrowser" time="9.798">
+<testsuite name="Test Scroll01" tests="1" errors="0" failures="0" skipped="0" time="9.960" timestamp="2024-04-28T06:41:31.673857">
+<testcase classname="Sel.Test Scroll01" name=" Test01_checkbrowser" time="9.956">
 </testcase>
 </testsuite>
 </testsuite>
